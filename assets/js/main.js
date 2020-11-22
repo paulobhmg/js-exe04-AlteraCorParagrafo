@@ -2,16 +2,17 @@ function carregar(){
   const bodyConfig = getComputedStyle(document.body);
   const bgBody     = bodyConfig.backgroundColor;
   const container  = document.querySelector('.paragrafos');
-  console.log(bodyConfig);
 
   for(let i = 0; i < 4; i++){
     criaParagrafos('.paragrafos');
   }
 
   const paragrafos = container.querySelectorAll('p');
-  for(let paragrafo of paragrafos){
-    alteraCor(paragrafo, bgBody, '#FFF');
-  }
+  // for(let paragrafo of paragrafos){
+  //   alteraCor(paragrafo, bgBody, '#FFF');
+  // }
+
+  paragrafos.forEach(paragrafo => alteraCor(paragrafo, bgBody, '#FFF'));
 }
 
 function criaParagrafos(elemento){
